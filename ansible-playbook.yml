@@ -118,7 +118,7 @@
         name: trainingwale
         compose:
           - /opt/docker/trainingwale/trainingwale.yml
-      register: out7
+      register: out6
       tags: docker-stack-deploy
     - debug:
-        var: out7
+        var: out6

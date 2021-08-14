@@ -88,7 +88,7 @@
     - name: "Build an image and push it to a private repo"
       docker_image:
         build:
-          path: /tmp/trainingwale
+          path: /opt/docker/trainingwale
         name: 127.0.0.1:5000/trainingwaleapp
         tag: latest
         push: yes
@@ -117,7 +117,7 @@
         state: present
         name: trainingwale
         compose:
-          - /tmp/trainingwale/trainingwale.yml
+          - /opt/docker/trainingwale/trainingwale.yml
       register: out6
       tags: docker-stack-deploy
     - debug:
